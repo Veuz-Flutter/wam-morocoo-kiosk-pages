@@ -265,6 +265,68 @@ function showDummyControlls() {
     }
 }
 
+// Registration Form Functions
+function openRegistrationForm() {
+    console.log('📝 Opening registration form');
+    const registrationForm = document.getElementById('registrationForm');
+    if (registrationForm) {
+        registrationForm.classList.remove('hidden');
+        console.log('👁️ Registration form visible');
+    }
+
+    sendToFlutter({
+        type: 'openRegistrationForm',
+        timestamp: new Date().toISOString()
+    });
+}
+
+function closeRegistrationForm() {
+    console.log('❌ Closing registration form');
+    const registrationForm = document.getElementById('registrationForm');
+    if (registrationForm) {
+        registrationForm.classList.add('hidden');
+        console.log('🙈 Registration form hidden');
+    }
+
+    sendToFlutter({
+        type: 'closeRegistrationForm',
+        timestamp: new Date().toISOString()
+    });
+}
+
+function handleRegistrationSubmit(event) {
+    event.preventDefault();
+    console.log('📝 Registration form submitted');
+
+    // Get form data
+    const formData = new FormData(event.target);
+    const registrationData = {
+        firstname: formData.get('firstname'),
+        lastname: formData.get('lastname'),
+        email: formData.get('email'),
+        mobile: formData.get('mobile'),
+        company: formData.get('company'),
+        designation: formData.get('designation'),
+        nationality: formData.get('nationality'),
+        ticket: formData.get('ticket') ? { ticket_display_name: formData.get('ticket') } : null
+    };
+
+    console.log('📋 Registration data:', registrationData);
+
+    // Send to Flutter
+    sendToFlutter({
+        type: 'registrationSubmit',
+        data: registrationData,
+        timestamp: new Date().toISOString()
+    });
+
+    // Close the form after submission
+    closeRegistrationForm();
+
+    // Optionally show success message or welcome message
+    // showWelcome(registrationData);
+}
+
 // Customer details data
 let customerData = null;
 let isCustomerDetailsVisible = false;

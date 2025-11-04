@@ -9,24 +9,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <style>
-
-        .main-content{
+        .main-content {
             background: #00000099;
         }
 
-        .welcome-title{
+        .welcome-title {
             color: #fff;
         }
 
-        .responsibility{
+        .responsibility {
             color: #fff;
         }
 
-        .responsibility-bold{
+        .responsibility-bold {
             color: #fff;
         }
 
-       .checkin-btn {
+        .checkin-btn {
             background: rgba(255, 255, 255, 0.066);
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
@@ -41,7 +40,7 @@
             isolation: isolate;
         }
 
-        
+
 
         .main_bg_video {
             position: fixed;
@@ -59,7 +58,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            background: rgba(0, 0, 0, 0.5);
+            /* Adjust opacity as needed */
             z-index: -1;
         }
 
@@ -75,7 +75,7 @@
             object-fit: cover;
         }
 
-        .header{
+        .header {
             background: #00000099;
 
         }
@@ -86,13 +86,16 @@
     <!-- Customer Details Panel -->
     <div id="dummyControllContainer"></div>
 
-      <div class="main_bg_video">
-            <video autoplay muted loop playsinline>
-                <!-- <source src="videos/gulfood_01_old.mp4" type="video/mp4"> -->
-                <!-- Add fallback sources if needed -->
-                <source src="videos/gulfood_01.webm" type="video/webm">
-            </video>
-        </div>
+    <!-- Registration Form Container -->
+    <div id="registrationFormContainer"></div>
+
+    <div class="main_bg_video">
+        <video autoplay muted loop playsinline>
+            <!-- <source src="videos/gulfood_01_old.mp4" type="video/mp4"> -->
+            <!-- Add fallback sources if needed -->
+            <source src="videos/gulfood_01.webm" type="video/webm">
+        </video>
+    </div>
 
     <!-- Header Section -->
     <div class="header">
@@ -113,7 +116,7 @@
 
     <!-- Main Content Section -->
     <div class="main-content">
-      
+
         <div class="main-content_wrapper" id="mainContent">
             <div class="welcome-section">
                 <div class="welcome-title">
@@ -185,6 +188,14 @@
                 document.getElementById('dummyControllContainer').innerHTML = html;
             })
             .catch(error => console.error('Error loading customer details panel:', error));
+
+        // Load registration form from external file
+        fetch('registration-form.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('registrationFormContainer').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading registration form:', error));
     </script>
     <script src="scripts.js"></script>
 </body>
