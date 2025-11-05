@@ -501,6 +501,16 @@
             padding-left: 52px;
         }
 
+        /* Fix no padding in intl-tel-input country search field */
+        .iti__search-input {
+            padding: 8px 12px !important;
+            box-sizing: border-box;
+            background-image: none !important;
+            /* remove built-in search icon */
+            background-position: initial !important;
+            background-size: initial !important;
+        }
+
         /* Select2 Custom Styling */
         .select2-container--default .select2-selection--single {
             background: white;
@@ -674,7 +684,8 @@
                 </button>
             </div>
 
-            <form id="registrationFormElement" class="form_main" onsubmit="handleRegistrationSubmit(event)">
+            <form id="registrationFormElement" class="form_main" onsubmit="handleRegistrationSubmit(event)"
+                autocomplete="off">
                 <div class="registration-loading-overlay" id="registrationLoadingOverlay">
                     <div class="registration-loading-text">
                         <div class="registration-loading-spinner"></div>
@@ -689,12 +700,14 @@
                                 <div class="form_row">
                                     <div class="registration-field">
                                         <label for="reg-firstname">First Name</label>
-                                        <input type="text" id="reg-firstname" name="firstname"
+                                        <input type="text" id="reg-firstname" name="firstname" autocomplete="off"
+                                            spellcheck="false" autocapitalize="off" autocorrect="off"
                                             placeholder="Enter First Name">
                                     </div>
                                     <div class="registration-field">
                                         <label for="reg-lastname">Last Name</label>
-                                        <input type="text" id="reg-lastname" name="lastname"
+                                        <input type="text" id="reg-lastname" name="lastname" autocomplete="off"
+                                            spellcheck="false" autocapitalize="off" autocorrect="off"
                                             placeholder="Enter Last Name">
                                     </div>
                                 </div>
@@ -702,13 +715,15 @@
                                 <div class="form_row">
                                     <div class="registration-field">
                                         <label for="reg-email">Email Address</label>
-                                        <input type="email" id="reg-email" name="email"
+                                        <input type="email" id="reg-email" name="email" autocomplete="off"
+                                            spellcheck="false" autocapitalize="off" autocorrect="off"
                                             placeholder="Enter Email Address">
                                     </div>
                                     <div class="registration-field">
                                         <label for="reg-mobile">Phone Number</label>
                                         <div class="phone-input-container">
-                                            <input id="reg-mobile" type="tel" name="mobile"
+                                            <input id="reg-mobile" type="tel" name="mobile" autocomplete="off"
+                                                spellcheck="false" autocapitalize="off" autocorrect="off"
                                                 placeholder="Enter phone number">
                                         </div>
                                     </div>
@@ -716,12 +731,14 @@
                                 <div class="form_row">
                                     <div class="registration-field">
                                         <label for="reg-company">Company Name</label>
-                                        <input type="text" id="reg-company" name="company"
+                                        <input type="text" id="reg-company" name="company" autocomplete="off"
+                                            spellcheck="false" autocapitalize="off" autocorrect="off"
                                             placeholder="Enter Company Name">
                                     </div>
                                     <div class="registration-field">
                                         <label for="reg-designation">Job Title</label>
-                                        <input type="text" id="reg-designation" name="designation"
+                                        <input type="text" id="reg-designation" name="designation" autocomplete="off"
+                                            spellcheck="false" autocapitalize="off" autocorrect="off"
                                             placeholder="Enter Job Title">
                                     </div>
                                 </div>
