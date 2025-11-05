@@ -756,10 +756,11 @@ function disableRegistrationAutocomplete() {
     form.setAttribute('autocomplete', 'off');
     const fields = form.querySelectorAll('input, select');
     fields.forEach(field => {
-        field.setAttribute('autocomplete', 'off');
+        field.setAttribute('autocomplete', 'new-password');
         field.setAttribute('autocorrect', 'off');
         field.setAttribute('autocapitalize', 'off');
         field.setAttribute('spellcheck', 'false');
+        field.setAttribute('data-lpignore', 'true');
     });
 }
 
@@ -1214,20 +1215,22 @@ function disableAllAutocomplete() {
         // Disable on all controls within the form
         const controls = form.querySelectorAll('input, select, textarea');
         controls.forEach(function (el) {
-            el.setAttribute('autocomplete', 'off');
+            el.setAttribute('autocomplete', 'new-password');
             el.setAttribute('autocapitalize', 'off');
             el.setAttribute('autocorrect', 'off');
             el.setAttribute('spellcheck', 'false');
+            el.setAttribute('data-lpignore', 'true');
         });
     });
 
     // Also disable on any loose inputs on the page (outside forms)
     const looseControls = document.querySelectorAll('body input, body select, body textarea');
     looseControls.forEach(function (el) {
-        el.setAttribute('autocomplete', 'off');
+        el.setAttribute('autocomplete', 'new-password');
         el.setAttribute('autocapitalize', 'off');
         el.setAttribute('autocorrect', 'off');
         el.setAttribute('spellcheck', 'false');
+        el.setAttribute('data-lpignore', 'true');
     });
 }
 

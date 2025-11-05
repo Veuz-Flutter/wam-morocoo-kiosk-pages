@@ -1121,10 +1121,11 @@
             // Force-disable autocomplete and text corrections on all form controls
             const controls = document.querySelectorAll('#registrationFormElement input, #registrationFormElement select, #registrationFormElement textarea');
             controls.forEach(function (el) {
-                el.setAttribute('autocomplete', 'off');
+                el.setAttribute('autocomplete', 'new-password');
                 el.setAttribute('autocapitalize', 'off');
                 el.setAttribute('autocorrect', 'off');
                 el.setAttribute('spellcheck', 'false');
+                el.setAttribute('data-lpignore', 'true');
             });
 
             document.getElementById('reg-firstname').addEventListener('input', updateBadgePreview);
