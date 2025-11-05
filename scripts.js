@@ -1297,7 +1297,6 @@ window.addEventListener('load', function () {
     } catch (e) {
         console.warn('Error disabling autocomplete globally:', e);
     }
-``
     sendToFlutter({
         type: 'pageLoaded',
         timestamp: new Date().toISOString()
