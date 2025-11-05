@@ -884,6 +884,10 @@ function handleRegistrationSubmit(event) {
         designation: formData.get('designation'),
         nationality: formData.get('nationality'),
         country_of_residence: formData.get('country_of_residence'),
+        country: formData.get('nationality'),
+        country_code: "IN",
+        nationality_code: "IN",
+        country_of_residence_code: "IN",
         ticket: 42,
         // ticket: 29,
     };
