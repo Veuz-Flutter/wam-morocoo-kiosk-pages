@@ -241,11 +241,11 @@ body {
     align-items: center;
     padding: 20px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(74, 44, 122, 0.3);
+    box-shadow: 0 8px 25px rgb(102 0 0 / 36%);
 }
 
 .checkin-btn:hover {
-    box-shadow: 0 12px 35px rgba(74, 44, 122, 0.4);
+    box-shadow: 0 8px 25px rgb(102 0 0 / 50%);
 }
 
 .checkin-btn.hidden {
@@ -477,7 +477,7 @@ body {
 }
 
 .modal-content {
-    background: linear-gradient(91deg, #221eac 0%, #6b0285 100%);
+    background: linear-gradient(91deg, #003504 0%, #660000 100%);
     background-size: 120% 120%;
     background-position: center;
     padding: 18px 22px;

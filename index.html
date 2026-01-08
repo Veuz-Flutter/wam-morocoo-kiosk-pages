@@ -54,6 +54,15 @@
             z-index: -1;
         }
 
+        .main_bg_video img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        
+
         .main_bg_video::after {
             content: '';
             position: fixed;
@@ -100,11 +109,11 @@
     <div id="welcomeMessageContainer"></div>
 
     <div class="main_bg_video">
-        <video autoplay muted loop playsinline>
-            <!-- <source src="videos/gulfood_01_old.mp4" type="video/mp4"> -->
-            <!-- Add fallback sources if needed -->
+        <!-- <video autoplay muted loop playsinline>
             <source src="videos/gulfood_01.webm" type="video/webm">
-        </video>
+        </video> -->
+
+        <img  src="bg.png" alt="">
     </div>
 
     <!-- Header Section -->
@@ -119,7 +128,7 @@
         </button>
         <div class="logo-container">
             <div class="logo-icon">
-                <img src="gfm_home_logo.png" alt="GULFOOD MANUFACTURING Logo">
+                <img src="wam_logo.png" alt="GULFOOD MANUFACTURING Logo">
             </div>
         </div>
     </div>

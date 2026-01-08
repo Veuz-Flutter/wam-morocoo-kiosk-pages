@@ -44,7 +44,7 @@
             min-width: 95%;
             max-width: 95%;
             max-height: 90vh;
-            overflow-y: auto;
+            overflow-y: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             animation: registrationSlideIn 0.4s ease-out;
             position: relative;
@@ -271,13 +271,13 @@
         }
 
         .registration-btn-primary {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            background: linear-gradient(91deg, #003504 0%, #660000 100%);
             color: white;
 
         }
 
         .registration-btn-primary:hover {
-            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+            background: linear-gradient(91deg, #660000 0%, #003504  100%);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
         }
@@ -316,7 +316,12 @@
         }
 
         .modal_header {
-            background: linear-gradient(135deg, #6b0285 0%, #4a2c7a 100%);
+            /* background: linear-gradient(135deg, #6b0285 0%, #4a2c7a 100%); */
+            background-image: url(bg.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
         }
 
         .registration-close-btn:hover {
@@ -364,11 +369,12 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: linear-gradient(135deg, #6b0285 0%, #4a2c7a 100%);
-            background-image: url(./img/card_footer.png);
+            background-image: url(bg.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-color: #00000078;
+            background-blend-mode: multiply;
         }
 
         .badge_right_data .hero img {
@@ -487,10 +493,12 @@
             justify-content: center;
             color: white;
             text-transform: uppercase;
-            background-image: url(./img/card_footer.png);
+            background-image: url(bg.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-color: #00000078;
+            background-blend-mode: multiply;
         }
 
         .badge_right_data .category .small {
