@@ -505,7 +505,7 @@ function initPhoneInput() {
 
         if (!iti) {
             iti = window.intlTelInput(input, {
-                initialCountry: "ae",
+                initialCountry: "ma",
                 preferredCountries: PREFERRED_COUNTRIES,
                 separateDialCode: true,
                 utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.12/build/js/utils.js"
